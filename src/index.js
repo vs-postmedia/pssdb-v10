@@ -24,15 +24,13 @@ import'./fonts/BentonSansCond-BoldItalic.otf';
 // VARS
 const appId ='app';
 const tableId ='cloudtable';
-const clientId ='vsun-pssdb-test';
+const clientId ='vsun-pssdb-v10';
 const cloudTableIp ='138.197.196.21';
+const apiKey = '5KhDjJ3plIVSSDRhgm5520Da'; // read-only
 let cloudTableId ='61d61386-26fa-11ed-b07d-2b528d595799'; // 93k-row full data
-// cloudTableId ='011124fc-2743-11ed-ba68-3ff4d656a6ca';  // 50-row test data
 
 // JS
 const init = async () => {
-    console.log('init!');
-
     // create dynamic list of options for agency select tag
     createAgencyComboBox();
 
@@ -67,12 +65,7 @@ async function loadCloudTable(agency) {
     let conditionsArray = [
         {
             id:'dp-9', // find this in the data page your cloudtables dataset
-            // id:'dp-25', // for 50-row test data
             value: agency
-        // },
-        // {
-        //     id:'dp-11',
-        //     value: sector
         }
     ];
 
@@ -80,8 +73,8 @@ async function loadCloudTable(agency) {
     let conditions = agency ? conditionsArray : null;
 
     // grab the ct api instance
-    let api = new CloudTablesApi('5KhDjJ3plIVSSDRhgm5520Da', {
-        clientName:'Test',          // Client's name - optional
+    let api = new CloudTablesApi(apiKey, {
+        clientName:'pssdb_v10',          // Client's name - optional
         domain: cloudTableIp,       // Your CloudTables host
         ssl: false,                 // Disable https
         conditions: conditions      // Use this to filter table
@@ -96,10 +89,6 @@ async function loadCloudTable(agency) {
     script.setAttribute('data-token', token);
     script.setAttribute('data-insert', tableId);
     script.setAttribute('data-clientId', clientId);
-    // script.setAttribute('data-condition', {
-    //     id:'dp-25',
-    //     value:'UBC'
-    // }); // THIS DOESN'T WORK. boo...
 
     // insert the script tag to load the table
     let app = document.getElementById(appId).appendChild(script);
@@ -247,20 +236,5 @@ function setupAgencyCombobox(combobox, defaultText) {
         $(combobox).combobox();
     });
 }
-
-// function setupSectorFilter() {
-//     const filter = document.getElementById('combobox');
-
-//     filter.addEventListener('change', e => {
-//         // reset container dom element
-//         document.getElementsByClassName('cloudtables')[0].textContent ='';
-
-//         // reload the table with selected agency filtered
-//         const filterValue = e.target.value ==='all'? null : e.target.value;
-
-//         console.log(filterValue)
-//         loadCloudTable(filterValue);
-//     });
-// }
 
 init();
