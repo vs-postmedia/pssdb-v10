@@ -67,35 +67,10 @@
 	--grey05:#EAEBEC;
 
 	/* PARTY COLOURS */
-	--ndp: #F58220;
-	--liberal: #d71920;
-	--cpc: #236492;
-	--ppc: #452c7a;
-	--green: #3D9B35;
+	--ndp: #F58645;
+	--liberal: #E35D42;
+	--conservative: #3C76B0;
+	--green: #34A185;
 	--libertarian: #F8C052;
-	--bloc: #42b7bf;
-
-	/* BC PARTY COLOURS*/
-	--greenbc: #009A44;
-	--liberalbc: #08479A;
-	--npdbc: #FD4E27;
-}
-
-
-/* COLOUR SHORTCUTS */
-.black {
-	color: var(--black);
-	font-family: BentonSansCond-Bold;
-}
-.blue {
-	color: var(--blue01);
-	font-family: BentonSansCond-Bold;
-}
-.green {
-	color: var(--green01);
-	font-family: BentonSansCond-Bold;
-}
-.purple {
-	color: var(--brite_purple01);
-	font-family: BentonSansCond-Bold;
+	--bloc: #54A8DF;
 }

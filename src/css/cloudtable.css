@@ -1,0 +1,61 @@
+/* COMBOBOX FILTER & SEARCH BAR */
+#filters {
+    padding: 10px;
+}
+
+/* SEARCH BAR */
+#app .cloudtables .dataTables_filter {
+    text-align: left;
+}
+
+#filter-agency-label,
+#app .cloudtables .dataTables_filter label {
+    font-family: 'BentonSansCond-Bold';
+    font-size: 1.1rem;
+}
+#app .cloudtables div.dataTables_wrapper .dataTables_filter input {
+    font-family: 'BentonSansCond-RegItalic';
+    font-size: 1rem;;
+    margin-left: 10px;
+}
+
+/* TABLE HEADER */
+#app .cloudtables table.dataTable .ui-state-default {
+    background: #FFF;
+    border: none;
+    border-bottom: 2px solid #231F20;
+    font-family: 'BentonSansCond-Bold', bold;
+}
+#app table.dataTable thead>tr>th.dt-ordering-asc:before, 
+#app table.dataTable thead>tr>th.dt-ordering-desc:after, 
+#app table.dataTable thead>tr>td.dt-ordering-asc:before, 
+#app table.dataTable thead>tr>td.dt-ordering-desc:after {
+    color: #0062A3;
+    opacity: 1;
+}
+
+/* TABLE BODY */
+#app .cloudtables table.dataTable tbody td {
+    font-family: 'BentonSansCond-Regular';
+    padding: 4px 6px;
+}
+
+/* TABLE DETAILS */
+#app table.dataTable.dtr-column>tbody>tr>td.dtr-control:before {
+    background-color: #0062A3;
+}
+#app div.cloudtables table.dataTable dl.dtr-details dd {
+    flex: 1 1 33%;
+    font-family: 'BentonSansCond-Bold', bold;
+    margin-bottom: 6px;
+}
+#app div.cloudtables table.dataTable dl.dtr-details dt {
+    flex: 2 2 66%;
+    margin-top: 8px;
+}
+
+/* TABLE FOOTER */
+#app div.cloudtables .dataTables_info,
+#app div.cloudtables .dataTables_paginate {
+    font-family: 'BentonSansCond-Regular';
+}
