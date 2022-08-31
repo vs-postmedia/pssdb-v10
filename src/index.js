@@ -64,7 +64,7 @@ function createAgencyComboBox() {
 async function loadCloudTable(agency) {
     let conditionsArray = [
         {
-            id:'dp-9', // find this in the data page your cloudtables dataset
+            id:'dp-9', // find the ID for the agency column in the data page of your cloudtables dataset
             value: agency
         }
     ];
