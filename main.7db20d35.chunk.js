@@ -248,7 +248,11 @@ function _loadCloudTable() {
               // Disable https
               conditions: conditions // Use this to filter table
 
-            }); // let script_tag = await api.dataset('61d61386-26fa-11ed-b07d-2b528d595799').scriptTagAsync();
+            }); // let script_str = await api.dataset('61d61386-26fa-11ed-b07d-2b528d595799').scriptTagAsync();
+            // const domParser = new DOMParser();
+            // const doc = domParser.parseFromString(script_str, 'text/html');
+            // let script_tag = doc.getElementsByTagName('script')
+            // console.log(script_tag[0])
             // build the script tag for the table
 
             _context2.next = 5;
