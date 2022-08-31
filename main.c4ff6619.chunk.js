@@ -170,10 +170,11 @@ var jquery_ui_autocomplete = __webpack_require__(153);
 
 var appId = 'app';
 var tableId = 'cloudtable';
-var clientId = 'vsun-pssdb-test';
+var clientId = 'vsun-pssdb-v10';
 var cloudTableIp = '138.197.196.21';
+var apiKey = '5KhDjJ3plIVSSDRhgm5520Da'; // read-only
+
 var cloudTableId = '61d61386-26fa-11ed-b07d-2b528d595799'; // 93k-row full data
-// cloudTableId ='011124fc-2743-11ed-ba68-3ff4d656a6ca';  // 50-row test data
 // JS
 
 var init = /*#__PURE__*/function () {
@@ -182,15 +183,14 @@ var init = /*#__PURE__*/function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            console.log('init!'); // create dynamic list of options for agency select tag
-
+            // create dynamic list of options for agency select tag
             createAgencyComboBox(); // create combobox filter for agencies
 
             setupAgencyCombobox('#combobox'); // load the unfiltered cloudtable
 
             loadCloudTable('');
 
-          case 4:
+          case 3:
           case "end":
             return _context.stop();
         }
@@ -233,19 +233,14 @@ function _loadCloudTable() {
           case 0:
             conditionsArray = [{
               id: 'dp-9',
-              // find this in the data page your cloudtables dataset
-              // id:'dp-25', // for 50-row test data
-              value: agency // },
-              // {
-              //     id:'dp-11',
-              //     value: sector
-
+              // find the ID for the agency column in the data page of your cloudtables dataset
+              value: agency
             }]; // if the filter has been selected, filter for those options, otherwise show everything (null)
 
             conditions = agency ? conditionsArray : null; // grab the ct api instance
 
-            api = new CloudTablesApi_default.a('5KhDjJ3plIVSSDRhgm5520Da', {
-              clientName: 'Test',
+            api = new CloudTablesApi_default.a(apiKey, {
+              clientName: 'pssdb_v10',
               // Client's name - optional
               domain: cloudTableIp,
               // Your CloudTables host
@@ -265,11 +260,7 @@ function _loadCloudTable() {
             script.src = "http://".concat(cloudTableIp, "/io/loader/").concat(cloudTableId, "/table/d");
             script.setAttribute('data-token', token);
             script.setAttribute('data-insert', tableId);
-            script.setAttribute('data-clientId', clientId); // script.setAttribute('data-condition', {
-            //     id:'dp-25',
-            //     value:'UBC'
-            // }); // THIS DOESN'T WORK. boo...
-            // insert the script tag to load the table
+            script.setAttribute('data-clientId', clientId); // insert the script tag to load the table
 
             app = document.getElementById(appId).appendChild(script);
 
@@ -396,18 +387,7 @@ function setupAgencyCombobox(combobox, defaultText) {
 
     $(combobox).combobox();
   });
-} // function setupSectorFilter() {
-//     const filter = document.getElementById('combobox');
-//     filter.addEventListener('change', e => {
-//         // reset container dom element
-//         document.getElementsByClassName('cloudtables')[0].textContent ='';
-//         // reload the table with selected agency filtered
-//         const filterValue = e.target.value ==='all'? null : e.target.value;
-//         console.log(filterValue)
-//         loadCloudTable(filterValue);
-//     });
-// }
-
+}
 
 init();
 
