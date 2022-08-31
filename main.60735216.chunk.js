@@ -244,7 +244,7 @@ function _loadCloudTable() {
               // Client's name - optional
               domain: cloudTableIp,
               // Your CloudTables host
-              ssl: false,
+              ssl: true,
               // Disable https
               conditions: conditions // Use this to filter table
 
