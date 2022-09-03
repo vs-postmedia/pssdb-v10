@@ -49,7 +49,7 @@ function comboboxChangeHandler(e) {
     // reload the table with selected agency filtered
     const filterValue = e.target.value ==='all'? null : e.target.value;
 
-    console.log(filterValue)
+    // reload table
     loadCloudTable(filterValue);
 }
 
@@ -146,7 +146,6 @@ function setupAgencyCombobox(combobox, defaultText) {
                   item: ui.item.option
                 });
                 // trigger change event
-                console.log($('#combobox'))
                 $('#combobox').trigger('change');
               },
      
