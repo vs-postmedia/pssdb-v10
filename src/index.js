@@ -26,6 +26,7 @@ const appId ='app';
 const tableId ='cloudtable';
 const clientId ='vsun-pssdb-v10';
 const cloudTableIp ='138.197.196.21';
+const cloudTableDomain = 'vs-postmedia.cloudtables.me';
 const apiKey = '5KhDjJ3plIVSSDRhgm5520Da'; // read-only
 let cloudTableId ='61d61386-26fa-11ed-b07d-2b528d595799'; // 93k-row full data
 
@@ -74,21 +75,28 @@ async function loadCloudTable(agency) {
 
     // grab the ct api instance
     let api = new CloudTablesApi(apiKey, {
-        clientName:'pssdb_v10',          // Client's name - optional
-        domain: cloudTableIp,       // Your CloudTables host
-        ssl: false,                 // Disable https
+        clientName:'pssdb_v10',     // Client's name - optional
+        domain: cloudTableDomain,       // Your CloudTables host
+        // secure: false,              // Disallow (true), or allow (false) self-signed certificates   
+        // ssl: false,               // Disable https
         conditions: conditions      // Use this to filter table
     });
 
-    // let script_tag = await api.dataset('61d61386-26fa-11ed-b07d-2b528d595799').scriptTagAsync();
 
     // build the script tag for the table
     let token = await api.token();
     let script = document.createElement('script');
-    script.src = `http://${cloudTableIp}/io/loader/${cloudTableId}/table/d`;
+    script.src = `https://${cloudTableDomain}/io/loader/${cloudTableId}/table/d`;
     script.setAttribute('data-token', token);
     script.setAttribute('data-insert', tableId);
     script.setAttribute('data-clientId', clientId);
+
+    // let script_str = await api.dataset('61d61386-26fa-11ed-b07d-2b528d595799').scriptTagAsync();
+    // const domParser = new DOMParser();
+    // const doc = domParser.parseFromString(script_str, 'text/html');
+    // let script_tag = doc.getElementsByTagName('script')
+    
+    // console.log(script_tag[0])
 
     // insert the script tag to load the table
     let app = document.getElementById(appId).appendChild(script);
