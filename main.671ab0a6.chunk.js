@@ -208,8 +208,8 @@ function comboboxChangeHandler(e) {
   // reset container dom element
   $('.cloudtables')[0].textContent = ''; // reload the table with selected agency filtered
 
-  var filterValue = e.target.value === 'all' ? null : e.target.value;
-  console.log(filterValue);
+  var filterValue = e.target.value === 'all' ? null : e.target.value; // reload table
+
   loadCloudTable(filterValue);
 }
 
@@ -257,7 +257,7 @@ function _loadCloudTable() {
           case 5:
             token = _context2.sent;
             script = document.createElement('script');
-            script.src = "https://".concat(cloudTableDomain, "/io/loader/").concat(cloudTableId, "/table/d");
+            script.src = "http://".concat(cloudTableDomain, "/io/loader/").concat(cloudTableId, "/table/d");
             script.setAttribute('data-token', token);
             script.setAttribute('data-insert', tableId);
             script.setAttribute('data-clientId', clientId); // let script_str = await api.dataset('61d61386-26fa-11ed-b07d-2b528d595799').scriptTagAsync();
@@ -315,7 +315,6 @@ function setupAgencyCombobox(combobox, defaultText) {
             }); // trigger change event
 
 
-            console.log($('#combobox'));
             $('#combobox').trigger('change');
           },
           autocompletechange: '_removeIfInvalid'
