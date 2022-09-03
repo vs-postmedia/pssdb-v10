@@ -257,7 +257,7 @@ function _loadCloudTable() {
           case 5:
             token = _context2.sent;
             script = document.createElement('script');
-            script.src = "http://".concat(cloudTableIp, "/io/loader/").concat(cloudTableId, "/table/d");
+            script.src = "http://".concat(cloudTableDomain, "/io/loader/").concat(cloudTableId, "/table/d");
             script.setAttribute('data-token', token);
             script.setAttribute('data-insert', tableId);
             script.setAttribute('data-clientId', clientId); // let script_str = await api.dataset('61d61386-26fa-11ed-b07d-2b528d595799').scriptTagAsync();
