@@ -246,7 +246,7 @@ function _loadCloudTable() {
               domain: cloudTableDomain,
               // Your CloudTables host
               // secure: false,              // Disallow (true), or allow (false) self-signed certificates   
-              // ssl: false,                 // Disable https
+              // ssl: false,               // Disable https
               conditions: conditions // Use this to filter table
 
             }); // build the script tag for the table
