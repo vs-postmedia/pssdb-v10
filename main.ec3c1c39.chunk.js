@@ -172,6 +172,7 @@ var appId = 'app';
 var tableId = 'cloudtable';
 var clientId = 'vsun-pssdb-v10';
 var cloudTableIp = '138.197.196.21';
+var cloudTableDomain = 'vs-postmedia.cloudtables.me';
 var apiKey = '5KhDjJ3plIVSSDRhgm5520Da'; // read-only
 
 var cloudTableId = '61d61386-26fa-11ed-b07d-2b528d595799'; // 93k-row full data
@@ -242,20 +243,13 @@ function _loadCloudTable() {
             api = new CloudTablesApi_default.a(apiKey, {
               clientName: 'pssdb_v10',
               // Client's name - optional
-              domain: cloudTableIp,
+              domain: cloudTableDomain,
               // Your CloudTables host
-              secure: false,
-              // Disallow (true), or allow (false) self-signed certificates   
-              ssl: false,
-              // Disable https
+              // secure: false,              // Disallow (true), or allow (false) self-signed certificates   
+              // ssl: false,                 // Disable https
               conditions: conditions // Use this to filter table
 
-            }); // let script_str = await api.dataset('61d61386-26fa-11ed-b07d-2b528d595799').scriptTagAsync();
-            // const domParser = new DOMParser();
-            // const doc = domParser.parseFromString(script_str, 'text/html');
-            // let script_tag = doc.getElementsByTagName('script')
-            // console.log(script_tag[0])
-            // build the script tag for the table
+            }); // build the script tag for the table
 
             _context2.next = 5;
             return api.token();
@@ -266,7 +260,12 @@ function _loadCloudTable() {
             script.src = "http://".concat(cloudTableIp, "/io/loader/").concat(cloudTableId, "/table/d");
             script.setAttribute('data-token', token);
             script.setAttribute('data-insert', tableId);
-            script.setAttribute('data-clientId', clientId); // insert the script tag to load the table
+            script.setAttribute('data-clientId', clientId); // let script_str = await api.dataset('61d61386-26fa-11ed-b07d-2b528d595799').scriptTagAsync();
+            // const domParser = new DOMParser();
+            // const doc = domParser.parseFromString(script_str, 'text/html');
+            // let script_tag = doc.getElementsByTagName('script')
+            // console.log(script_tag[0])
+            // insert the script tag to load the table
 
             app = document.getElementById(appId).appendChild(script);
 
