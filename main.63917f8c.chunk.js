@@ -169,8 +169,8 @@ var appId = 'app';
 var agencyId = 'dp-9'; // find the ID for the agency column in the data page of your cloudtables dataset
 
 var tableId = 'cloudtable';
-var clientId = 'vsun-pssdb-v10';
-var cloudTableIp = '138.197.196.21';
+var clientId = 'vsun-pssdb-v10'; // const cloudTableIp = '138.197.196.21';
+
 var cloudTableDomain = 'vs-postmedia.cloudtables.me';
 var apiKey = '5KhDjJ3plIVSSDRhgm5520Da'; // read-only
 
@@ -209,8 +209,7 @@ function comboboxChangeHandler(e) {
   // reset container dom element
   $('.cloudtables')[0].textContent = ''; // reload the table with selected agency filtered
 
-  var filterValue = e.target.value === 'All agencies' ? null : e.target.value;
-  console.log(e.target.value); // reload table
+  var filterValue = e.target.value === 'All agencies' ? null : e.target.value; // reload table
 
   loadCloudTable(filterValue);
 }
@@ -242,7 +241,7 @@ function _loadCloudTable() {
             conditions = agency ? conditionsArray : null; // grab the ct api instance
 
             api = new CloudTablesApi_default.a(apiKey, {
-              clientName: 'pssdb_v10',
+              clientName: clientId,
               // Client's name - optional
               domain: cloudTableDomain,
               // Your CloudTables host
