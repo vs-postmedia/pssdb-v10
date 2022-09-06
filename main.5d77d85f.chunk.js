@@ -137,8 +137,6 @@ var jquery_ui_autocomplete = __webpack_require__(153);
 /* harmony default export */ var BentonSansCond_RegItalic = (__webpack_require__.p + "assets/BentonSansCond-RegItalic.06edc58b.otf");
 // CONCATENATED MODULE: ./src/fonts/BentonSansCond-Bold.otf
 /* harmony default export */ var BentonSansCond_Bold = (__webpack_require__.p + "assets/BentonSansCond-Bold.87a66dcd.otf");
-// CONCATENATED MODULE: ./src/fonts/BentonSansCond-BoldItalic.otf
-/* harmony default export */ var BentonSansCond_BoldItalic = (__webpack_require__.p + "assets/BentonSansCond-BoldItalic.539670da.otf");
 // CONCATENATED MODULE: ./src/index.js
 
 
@@ -149,7 +147,7 @@ var jquery_ui_autocomplete = __webpack_require__(153);
 
 
 
- // import'jquery-ui/ui/widgets/autocomplete';
+ // import Combobox from './Components/Combobox/Combobox.js';
 
  // CSS
 
@@ -165,10 +163,11 @@ var jquery_ui_autocomplete = __webpack_require__(153);
 
 
 
-
  // VARS
 
 var appId = 'app';
+var agencyId = 'dp-9'; // find the ID for the agency column in the data page of your cloudtables dataset
+
 var tableId = 'cloudtable';
 var clientId = 'vsun-pssdb-v10';
 var cloudTableIp = '138.197.196.21';
@@ -187,7 +186,9 @@ var init = /*#__PURE__*/function () {
             // create dynamic list of options for agency select tag
             createAgencyComboBox(); // create combobox filter for agencies
 
-            setupAgencyCombobox('#combobox'); // load the unfiltered cloudtable
+            setupAgencyCombobox('#combobox'); // Combobox('#combobox', comboboxChangeHandler, 'Pick an agency...');
+            // $('#combobox').change(comboboxChangeHandler);
+            // load the unfiltered cloudtable
 
             loadCloudTable('');
 
@@ -208,7 +209,8 @@ function comboboxChangeHandler(e) {
   // reset container dom element
   $('.cloudtables')[0].textContent = ''; // reload the table with selected agency filtered
 
-  var filterValue = e.target.value === 'all' ? null : e.target.value; // reload table
+  var filterValue = e.target.value === 'All agencies' ? null : e.target.value;
+  console.log(e.target.value); // reload table
 
   loadCloudTable(filterValue);
 }
@@ -233,8 +235,7 @@ function _loadCloudTable() {
         switch (_context2.prev = _context2.next) {
           case 0:
             conditionsArray = [{
-              id: 'dp-9',
-              // find the ID for the agency column in the data page of your cloudtables dataset
+              id: agencyId,
               value: agency
             }]; // if the filter has been selected, filter for those options, otherwise show everything (null)
 
@@ -249,23 +250,19 @@ function _loadCloudTable() {
               // ssl: false,               // Disable https
               conditions: conditions // Use this to filter table
 
-            }); // build the script tag for the table
+            }); // get a cloudtables api token
 
             _context2.next = 5;
             return api.token();
 
           case 5:
             token = _context2.sent;
+            // build the script tag for the table
             script = document.createElement('script');
             script.src = "https://".concat(cloudTableDomain, "/io/loader/").concat(cloudTableId, "/table/d");
             script.setAttribute('data-token', token);
             script.setAttribute('data-insert', tableId);
-            script.setAttribute('data-clientId', clientId); // let script_str = await api.dataset('61d61386-26fa-11ed-b07d-2b528d595799').scriptTagAsync();
-            // const domParser = new DOMParser();
-            // const doc = domParser.parseFromString(script_str, 'text/html');
-            // let script_tag = doc.getElementsByTagName('script')
-            // console.log(script_tag[0])
-            // insert the script tag to load the table
+            script.setAttribute('data-clientId', clientId); // insert the script tag to load the table
 
             app = document.getElementById(appId).appendChild(script);
 
