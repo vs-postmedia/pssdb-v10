@@ -169,15 +169,11 @@ var appId = 'app';
 var agencyId = 'dp-1'; // find the ID for the agency column in the data page of your cloudtables dataset
 
 var tableId = 'cloudtable';
-var clientId = 'pssdb-v10'; // const cloudTableIp = '138.197.196.21';
-
-var cloudTableDomain = 'vs-postmedia.cloudtables.me'; // const apiKey = '5KhDjJ3plIVSSDRhgm5520Da'; // read-only
-
+var clientId = 'pssdb-v10';
+var cloudTableDomain = 'vs-postmedia.cloudtables.me';
 var apiKey = 'kcZqiHL7MiUCi1waLZYN1vkz'; // read-only
 
-var cloudTableId = '71636f86-2e5e-11ed-9765-8b941efc3b53'; // 200-row test file
-// let cloudTableId = '61d61386-26fa-11ed-b07d-2b528d595799'; // 93k-row full data
-// JS
+var cloudTableId = '71636f86-2e5e-11ed-9765-8b941efc3b53'; // JS
 
 var init = /*#__PURE__*/function () {
   var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
