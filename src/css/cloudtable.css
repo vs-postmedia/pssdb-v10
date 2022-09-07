@@ -1,6 +1,7 @@
-/* COMBOBOX FILTER & SEARCH BAR */
-#filters {
-    padding: 10px;
+/* Get rid of padding around table */
+#app div.dataTables_wrapper,
+#app div.dataTables_layout_cell {
+    padding: 10px 0 0 0;
 }
 
 /* SEARCH BAR */
@@ -39,6 +40,9 @@
     font-family: 'BentonSansCond-Regular';
     padding: 4px 6px;
 }
+#app div.cloudtables table.dataTable th.dtr-control {
+    padding: 0 25px 0 0;
+}
 
 /* TABLE DETAILS */
 #app table.dataTable.dtr-column>tbody>tr>td.dtr-control:before {
@@ -55,7 +59,20 @@
 }
 
 /* TABLE FOOTER */
+#app div.cloudtables caption {
+    font-size: 1rem;
+    margin-top: 6px;
+}
+#app div.cloudtables caption,
 #app div.cloudtables .dataTables_info,
 #app div.cloudtables .dataTables_paginate {
     font-family: 'BentonSansCond-Regular';
+}
+
+
+@media only screen and (min-width: 500px) {
+    #app .ct-column__dp-1,
+    #app .ct-column__dp-3 {
+        min-width: 130px !important;
+    }
 }

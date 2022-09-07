@@ -1,4 +1,8 @@
 /* APP & CHART WRAPPER */
+body {
+	margin: 0;
+}
+
 #app {
 	margin: 0 auto;
 	max-width: 750px;
