@@ -1,5 +1,5 @@
-# graphics-template
-Basic template to bootstrap multiple flourish embeds into a single graphic. Made with Webpack & node.
+# PSSDB v10
+Basic template to for Public sectory salary database, using CloudTables
 
 # embed code
-[protected-iframe id="999999" info="https://vs-postmedia.github.io/pssdb-v10/" height="600"]
+[protected-iframe info="https://vs-postmedia.github.io/pssdb-v10/" height="800"]
