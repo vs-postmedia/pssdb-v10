@@ -166,15 +166,17 @@ var jquery_ui_autocomplete = __webpack_require__(153);
  // VARS
 
 var appId = 'app';
-var agencyId = 'dp-9'; // find the ID for the agency column in the data page of your cloudtables dataset
+var agencyId = 'dp-1'; // find the ID for the agency column in the data page of your cloudtables dataset
 
 var tableId = 'cloudtable';
-var clientId = 'vsun-pssdb-v10'; // const cloudTableIp = '138.197.196.21';
+var clientId = 'pssdb-v10'; // const cloudTableIp = '138.197.196.21';
 
-var cloudTableDomain = 'vs-postmedia.cloudtables.me';
-var apiKey = '5KhDjJ3plIVSSDRhgm5520Da'; // read-only
+var cloudTableDomain = 'vs-postmedia.cloudtables.me'; // const apiKey = '5KhDjJ3plIVSSDRhgm5520Da'; // read-only
 
-var cloudTableId = '61d61386-26fa-11ed-b07d-2b528d595799'; // 93k-row full data
+var apiKey = 'kcZqiHL7MiUCi1waLZYN1vkz'; // read-only
+
+var cloudTableId = '71636f86-2e5e-11ed-9765-8b941efc3b53'; // 200-row test file
+// let cloudTableId = '61d61386-26fa-11ed-b07d-2b528d595799'; // 93k-row full data
 // JS
 
 var init = /*#__PURE__*/function () {
@@ -186,13 +188,15 @@ var init = /*#__PURE__*/function () {
             // create dynamic list of options for agency select tag
             createAgencyComboBox(); // create combobox filter for agencies
 
-            setupAgencyCombobox('#combobox'); // Combobox('#combobox', comboboxChangeHandler, 'Pick an agency...');
+            setupAgencyCombobox('#combobox'); // assign change handler
+
+            $('#combobox').change(comboboxChangeHandler); // Combobox('#combobox', comboboxChangeHandler, 'Pick an agency...');
             // $('#combobox').change(comboboxChangeHandler);
             // load the unfiltered cloudtable
 
             loadCloudTable('');
 
-          case 3:
+          case 4:
           case "end":
             return _context.stop();
         }
@@ -276,9 +280,7 @@ function _loadCloudTable() {
 }
 
 function setupAgencyCombobox(combobox, defaultText) {
-  // change handler
-  $(combobox).change(comboboxChangeHandler); // combobox setup
-
+  // combobox setup
   $(function () {
     $.widget('custom.combobox', {
       _create: function _create() {
