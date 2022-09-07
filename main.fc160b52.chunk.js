@@ -317,7 +317,8 @@ function setupAgencyCombobox(combobox, defaultText) {
       _createShowAllButton: function _createShowAllButton() {
         var input = this.input,
             wasOpen = false;
-        $('<a>').attr('tabIndex', -1).attr('title', 'Show All Items').tooltip().appendTo(this.wrapper).button({
+        $('<a>').attr('tabIndex', -1) // .attr('title','Show All Items')
+        .tooltip().appendTo(this.wrapper).button({
           icons: {
             primary: 'ui-icon-triangle-1-s'
           },
