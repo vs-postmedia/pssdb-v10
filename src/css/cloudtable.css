@@ -59,9 +59,9 @@
 }
 
 /* TABLE FOOTER */
-#app div.cloudtables caption {
+#app footer .source {
     font-size: 1rem;
-    margin-top: 6px;
+    /* margin-top: 6px; */
 }
 #app div.cloudtables caption,
 #app div.cloudtables .dataTables_info,
