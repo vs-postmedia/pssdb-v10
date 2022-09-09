@@ -1,13 +1,13 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
-/***/ 127:
+/***/ 113:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 129:
+/***/ 115:
 /***/ (function(module, exports) {
 
 /* (ignored) */
@@ -83,18 +83,6 @@ var web_dom_collections_for_each = __webpack_require__(92);
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.concat.js
 var es_array_concat = __webpack_require__(101);
 
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.constructor.js
-var es_regexp_constructor = __webpack_require__(109);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.exec.js
-var es_regexp_exec = __webpack_require__(115);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.to-string.js
-var es_regexp_to_string = __webpack_require__(121);
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.map.js
-var es_array_map = __webpack_require__(122);
-
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/regenerator/index.js
 var regenerator = __webpack_require__(18);
 var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
@@ -103,179 +91,29 @@ var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 var CloudTablesApi = __webpack_require__(82);
 var CloudTablesApi_default = /*#__PURE__*/__webpack_require__.n(CloudTablesApi);
 
-// CONCATENATED MODULE: ./src/data/agencies.js
-var agenciesList = ["All agencies", "Abbotsford Police", "Abbotsford School Board", "B.C. Assessment", "B.C. Ferries", "B.C. Housing", "B.C. Investment Management Corporation", "B.C. Lottery Corporation", "B.C. Oil and Gas Commission", "B.C. Pavilion Corporation", "B.C. Securities Commission", "B.C. Transit", "B.C. Utilities Commission", "BC Hydro and Power Authority", "Bowen Island", "Burnaby School Board", "Camosun College", "Capilano University", "Chilliwack School Board", "City of Abbotsford", "City of Burnaby", "City of Chilliwack", "City of Coquitlam", "City of Delta", "City of Kamloops", "City of Langley", "City of Maple Ridge", "City of Nelson", "City of New Westminster", "City of Pitt Meadows", "City of Port Coquitlam", "City of Port Moody", "City of Richmond", "City of Surrey", "City of Vancouver", "City of Victoria", "City of White Rock", "College of New Caledonia", "College of the Rockies", "Columbia Basin Trust", "Community Living B.C.", "Coquitlam School Board", "Delta Police", "Delta School Board", "District of Mission", "District of North Vancouver", "District of Saanich", "District of West Vancouver", "Douglas College", "EmilyCarr", "Forestry Innovation Investsment", "Fraser Health", "ICBC", "Interior Health", "Island Health", "Justice Institute of British Columbia", "Kwantlen Polytechnic University", "Langara College", "Langley School Board", "Legal Services Society", "Maple Ridge/Pitt Meadows School Board", "Metro Vancouver", "Metro Vancouver Transit Police", "Mission School Board", "Nelson Police", "New West Police", "New Westminster School Board", "North Island College", "North Vancouver School Board", "Northern Health", "Northern Lights College", "Oak Bay Police", "Okanagan", "PHSA", "Port Moody Police", "Powerex Corporation", "Powertech Labs. Inc.", "Providence Health", "Provincial government", "Richmond School Board", "Royal B.C. Museum", "Royal Roads University", "Saanich Police", "Selkirk College", "Simon Fraser University", "Surrey School Board", "Technical Safety B.C.", "Thompson Rivers University", "Township of Langley", "Transit police", "Translink", "University of British Columbia", "University of Northern British Columbia", "University of the Fraser Valley", "University of Victoria", "Vancouver Coastal Health", "Vancouver Community College", "Vancouver Island University", "Vancouver Police", "Vancouver School Board", "Victoria police", "Village of Anmore", "Village of Belcarra", "Village of Lions Bay", "West Vancouver School Board", "Worksafe B.C."];
-/* harmony default export */ var agencies = (agenciesList);
-// EXTERNAL MODULE: ./src/css/normalize.css
-var normalize = __webpack_require__(147);
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.constructor.js
+var es_regexp_constructor = __webpack_require__(133);
 
-// EXTERNAL MODULE: ./src/css/postmedia.css
-var postmedia = __webpack_require__(148);
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.exec.js
+var es_regexp_exec = __webpack_require__(139);
 
-// EXTERNAL MODULE: ./src/css/colors.css
-var colors = __webpack_require__(149);
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.regexp.to-string.js
+var es_regexp_to_string = __webpack_require__(145);
 
-// EXTERNAL MODULE: ./src/css/fonts.css
-var fonts = __webpack_require__(150);
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.map.js
+var es_array_map = __webpack_require__(146);
 
-// EXTERNAL MODULE: ./src/css/main.css
-var main = __webpack_require__(151);
+// EXTERNAL MODULE: ./src/Components/Combobox/jquery-ui-autocomplete.css
+var jquery_ui_autocomplete = __webpack_require__(147);
 
-// EXTERNAL MODULE: ./src/css/cloudtable.css
-var cloudtable = __webpack_require__(152);
-
-// EXTERNAL MODULE: ./src/css/jquery-ui-autocomplete.css
-var jquery_ui_autocomplete = __webpack_require__(153);
-
-// CONCATENATED MODULE: ./src/fonts/Shift-Bold.otf
-/* harmony default export */ var Shift_Bold = (__webpack_require__.p + "assets/Shift-Bold.8c454d7e.otf");
-// CONCATENATED MODULE: ./src/fonts/Shift-BoldItalic.otf
-/* harmony default export */ var Shift_BoldItalic = (__webpack_require__.p + "assets/Shift-BoldItalic.144e2c1f.otf");
-// CONCATENATED MODULE: ./src/fonts/BentonSansCond-Regular.otf
-/* harmony default export */ var BentonSansCond_Regular = (__webpack_require__.p + "assets/BentonSansCond-Regular.4421f875.otf");
-// CONCATENATED MODULE: ./src/fonts/BentonSansCond-RegItalic.otf
-/* harmony default export */ var BentonSansCond_RegItalic = (__webpack_require__.p + "assets/BentonSansCond-RegItalic.06edc58b.otf");
-// CONCATENATED MODULE: ./src/fonts/BentonSansCond-Bold.otf
-/* harmony default export */ var BentonSansCond_Bold = (__webpack_require__.p + "assets/BentonSansCond-Bold.87a66dcd.otf");
-// CONCATENATED MODULE: ./src/index.js
+// CONCATENATED MODULE: ./src/Components/Combobox/Combobox.js
 
 
 
 
 
 
-
-
-
- // import Combobox from './Components/Combobox/Combobox.js';
-
- // CSS
-
-
-
-
-
-
-
- // FONTS
-
-
-
-
-
- // VARS
-
-var appId = 'app';
-var agencyId = 'dp-1'; // find the ID for the agency column in the data page of your cloudtables dataset
-
-var tableId = 'cloudtable';
-var clientId = 'pssdb-v10';
-var cloudTableDomain = 'vs-postmedia.cloudtables.me';
-var apiKey = 'kcZqiHL7MiUCi1waLZYN1vkz'; // read-only
-
-var cloudTableId = '71636f86-2e5e-11ed-9765-8b941efc3b53'; // JS
-
-var init = /*#__PURE__*/function () {
-  var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
-    return regenerator_default.a.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            // create dynamic list of options for agency select tag
-            createAgencyComboBox(); // create combobox filter for agencies
-
-            setupAgencyCombobox('#combobox'); // assign change handler
-
-            $('#combobox').change(comboboxChangeHandler); // Combobox('#combobox', comboboxChangeHandler, 'Pick an agency...');
-            // $('#combobox').change(comboboxChangeHandler);
-            // load the unfiltered cloudtable
-
-            loadCloudTable('');
-
-          case 4:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-
-  return function init() {
-    return _ref.apply(this, arguments);
-  };
-}();
-
-function comboboxChangeHandler(e) {
-  // reset container dom element
-  $('.cloudtables')[0].textContent = ''; // reload the table with selected agency filtered
-
-  var filterValue = e.target.value === 'All agencies' ? null : e.target.value; // reload table
-
-  loadCloudTable(filterValue);
-}
-
-function createAgencyComboBox() {
-  var agenciesString = '';
-  agencies.forEach(function (d) {
-    agenciesString += "<option value='".concat(d, "'>").concat(d, "</option>");
-  });
-  $('#combobox').append(agenciesString);
-}
-
-function loadCloudTable(_x) {
-  return _loadCloudTable.apply(this, arguments);
-}
-
-function _loadCloudTable() {
-  _loadCloudTable = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2(agency) {
-    var conditionsArray, conditions, api, token, script, app;
-    return regenerator_default.a.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            conditionsArray = [{
-              id: agencyId,
-              value: agency
-            }]; // if the filter has been selected, filter for those options, otherwise show everything (null)
-
-            conditions = agency ? conditionsArray : null; // grab the ct api instance
-
-            api = new CloudTablesApi_default.a(apiKey, {
-              clientName: clientId,
-              // Client's name - optional
-              domain: cloudTableDomain,
-              // Your CloudTables host
-              // secure: false,              // Disallow (true), or allow (false) self-signed certificates   
-              // ssl: false,               // Disable https
-              conditions: conditions // Use this to filter table
-
-            }); // get a cloudtables api token
-
-            _context2.next = 5;
-            return api.token();
-
-          case 5:
-            token = _context2.sent;
-            // build the script tag for the table
-            script = document.createElement('script');
-            script.src = "https://".concat(cloudTableDomain, "/io/loader/").concat(cloudTableId, "/table/d");
-            script.setAttribute('data-token', token);
-            script.setAttribute('data-insert', tableId);
-            script.setAttribute('data-clientId', clientId); // insert the script tag to load the table
-
-            app = document.getElementById(appId).appendChild(script);
-
-          case 12:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, _callee2);
-  }));
-  return _loadCloudTable.apply(this, arguments);
-}
-
-function setupAgencyCombobox(combobox, defaultText) {
+function setupAgencyCombobox(combobox) {
   // combobox setup
   $(function () {
     $.widget('custom.combobox', {
@@ -386,6 +224,169 @@ function setupAgencyCombobox(combobox, defaultText) {
 
     $(combobox).combobox();
   });
+}
+
+/* harmony default export */ var Combobox = (setupAgencyCombobox);
+// CONCATENATED MODULE: ./src/data/agencies.js
+var agenciesList = ["All agencies", "Abbotsford Police", "Abbotsford School Board", "B.C. Assessment", "B.C. Ferries", "B.C. Housing", "B.C. Investment Management Corporation", "B.C. Lottery Corporation", "B.C. Oil and Gas Commission", "B.C. Pavilion Corporation", "B.C. Securities Commission", "B.C. Transit", "B.C. Utilities Commission", "BC Hydro and Power Authority", "Bowen Island", "Burnaby School Board", "Camosun College", "Capilano University", "Chilliwack School Board", "City of Abbotsford", "City of Burnaby", "City of Chilliwack", "City of Coquitlam", "City of Delta", "City of Kamloops", "City of Langley", "City of Maple Ridge", "City of Nelson", "City of New Westminster", "City of Pitt Meadows", "City of Port Coquitlam", "City of Port Moody", "City of Richmond", "City of Surrey", "City of Vancouver", "City of Victoria", "City of White Rock", "College of New Caledonia", "College of the Rockies", "Columbia Basin Trust", "Community Living B.C.", "Coquitlam School Board", "Delta Police", "Delta School Board", "District of Mission", "District of North Vancouver", "District of Saanich", "District of West Vancouver", "Douglas College", "EmilyCarr", "Forestry Innovation Investsment", "Fraser Health", "ICBC", "Interior Health", "Island Health", "Justice Institute of British Columbia", "Kwantlen Polytechnic University", "Langara College", "Langley School Board", "Legal Services Society", "Maple Ridge/Pitt Meadows School Board", "Metro Vancouver", "Metro Vancouver Transit Police", "Mission School Board", "Nelson Police", "New West Police", "New Westminster School Board", "North Island College", "North Vancouver School Board", "Northern Health", "Northern Lights College", "Oak Bay Police", "Okanagan", "PHSA", "Port Moody Police", "Powerex Corporation", "Powertech Labs. Inc.", "Providence Health", "Provincial government", "Richmond School Board", "Royal B.C. Museum", "Royal Roads University", "Saanich Police", "Selkirk College", "Simon Fraser University", "Surrey School Board", "Technical Safety B.C.", "Thompson Rivers University", "Township of Langley", "Transit police", "Translink", "University of British Columbia", "University of Northern British Columbia", "University of the Fraser Valley", "University of Victoria", "Vancouver Coastal Health", "Vancouver Community College", "Vancouver Island University", "Vancouver Police", "Vancouver School Board", "Victoria police", "Village of Anmore", "Village of Belcarra", "Village of Lions Bay", "West Vancouver School Board", "Worksafe B.C."];
+/* harmony default export */ var agencies = (agenciesList);
+// EXTERNAL MODULE: ./src/css/normalize.css
+var normalize = __webpack_require__(148);
+
+// EXTERNAL MODULE: ./src/css/postmedia.css
+var postmedia = __webpack_require__(149);
+
+// EXTERNAL MODULE: ./src/css/colors.css
+var colors = __webpack_require__(150);
+
+// EXTERNAL MODULE: ./src/css/fonts.css
+var fonts = __webpack_require__(151);
+
+// EXTERNAL MODULE: ./src/css/main.css
+var main = __webpack_require__(152);
+
+// EXTERNAL MODULE: ./src/css/cloudtable.css
+var cloudtable = __webpack_require__(153);
+
+// CONCATENATED MODULE: ./src/fonts/Shift-Bold.otf
+/* harmony default export */ var Shift_Bold = (__webpack_require__.p + "assets/Shift-Bold.8c454d7e.otf");
+// CONCATENATED MODULE: ./src/fonts/Shift-BoldItalic.otf
+/* harmony default export */ var Shift_BoldItalic = (__webpack_require__.p + "assets/Shift-BoldItalic.144e2c1f.otf");
+// CONCATENATED MODULE: ./src/fonts/BentonSansCond-Regular.otf
+/* harmony default export */ var BentonSansCond_Regular = (__webpack_require__.p + "assets/BentonSansCond-Regular.4421f875.otf");
+// CONCATENATED MODULE: ./src/fonts/BentonSansCond-RegItalic.otf
+/* harmony default export */ var BentonSansCond_RegItalic = (__webpack_require__.p + "assets/BentonSansCond-RegItalic.06edc58b.otf");
+// CONCATENATED MODULE: ./src/fonts/BentonSansCond-Bold.otf
+/* harmony default export */ var BentonSansCond_Bold = (__webpack_require__.p + "assets/BentonSansCond-Bold.87a66dcd.otf");
+// CONCATENATED MODULE: ./src/index.js
+
+
+
+
+
+
+
+ // CSS
+
+
+
+
+
+
+ // FONTS
+
+
+
+
+
+ // VARS
+
+var appId = 'app';
+var agencyId = 'dp-1'; // find the ID for the agency column in the data page of your cloudtables dataset
+
+var tableId = 'cloudtable';
+var clientId = 'pssdb-v10';
+var cloudTableDomain = 'vs-postmedia.cloudtables.me';
+var apiKey = 'kcZqiHL7MiUCi1waLZYN1vkz'; // read-only
+
+var cloudTableId = '71636f86-2e5e-11ed-9765-8b941efc3b53'; // JS
+
+var init = /*#__PURE__*/function () {
+  var _ref = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
+    return regenerator_default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            // create dynamic list of options for agency select tag
+            createAgencyComboBox(); // create combobox filter for agencies
+
+            Combobox('#combobox');
+            $('#combobox').change(comboboxChangeHandler); // load the unfiltered cloudtable
+
+            loadCloudTable('');
+
+          case 4:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function init() {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+function comboboxChangeHandler(e) {
+  // reset container dom element
+  $('.cloudtables')[0].textContent = ''; // reload the table with selected agency filtered
+
+  var filterValue = e.target.value === 'All agencies' ? null : e.target.value; // reload table
+
+  loadCloudTable(filterValue);
+}
+
+function createAgencyComboBox() {
+  var agenciesString = '';
+  agencies.forEach(function (d) {
+    agenciesString += "<option value='".concat(d, "'>").concat(d, "</option>");
+  });
+  $('#combobox').append(agenciesString);
+}
+
+function loadCloudTable(_x) {
+  return _loadCloudTable.apply(this, arguments);
+} // KICK *SHT OFF!!!
+
+
+function _loadCloudTable() {
+  _loadCloudTable = asyncToGenerator_default()( /*#__PURE__*/regenerator_default.a.mark(function _callee2(agency) {
+    var conditionsArray, conditions, api, token, script, app;
+    return regenerator_default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            conditionsArray = [{
+              id: agencyId,
+              value: agency
+            }]; // if the filter has been selected, filter for those options, otherwise show everything (null)
+
+            conditions = agency ? conditionsArray : null; // grab the ct api instance
+
+            api = new CloudTablesApi_default.a(apiKey, {
+              clientName: clientId,
+              // Client's name - optional
+              domain: cloudTableDomain,
+              // Your CloudTables host
+              // secure: false,              // Disallow (true), or allow (false) self-signed certificates   
+              // ssl: false,               // Disable https
+              conditions: conditions // Use this to filter table
+
+            }); // get a cloudtables api token
+
+            _context2.next = 5;
+            return api.token();
+
+          case 5:
+            token = _context2.sent;
+            // build the script tag for the table
+            script = document.createElement('script');
+            script.src = "https://".concat(cloudTableDomain, "/io/loader/").concat(cloudTableId, "/table/d");
+            script.setAttribute('data-token', token);
+            script.setAttribute('data-insert', tableId);
+            script.setAttribute('data-clientId', clientId); // insert the script tag to load the table
+
+            app = document.getElementById(appId).appendChild(script);
+
+          case 12:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2);
+  }));
+  return _loadCloudTable.apply(this, arguments);
 }
 
 init();
