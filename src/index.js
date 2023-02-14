@@ -22,9 +22,9 @@ const appId = 'app';
 const agencyId = 'dp-1'; // find the ID for the agency column in the data page of your cloudtables dataset
 const tableId = 'cloudtable';
 const clientId = 'pssdb-v10';
-const cloudTableDomain = 'vs-postmedia.cloudtables.me';
+const cloudTableDomain = 'vs-postmedia-a.cloudtables.me';
 const apiKey = 'kcZqiHL7MiUCi1waLZYN1vkz'; // read-only
-const cloudTableId = '71636f86-2e5e-11ed-9765-8b941efc3b53'; 
+const cloudTableId = '71636f86-2e5e-11ed-9765-8b941efc3b53';
 
 // JS
 const init = async () => {
