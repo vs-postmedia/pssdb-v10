@@ -286,7 +286,7 @@ var agencyId = 'dp-1'; // find the ID for the agency column in the data page of 
 
 var tableId = 'cloudtable';
 var clientId = 'pssdb-v10';
-var cloudTableDomain = 'vs-postmedia.cloudtables.me';
+var cloudTableDomain = 'vs-postmedia-a.cloudtables.me';
 var apiKey = 'kcZqiHL7MiUCi1waLZYN1vkz'; // read-only
 
 var cloudTableId = '71636f86-2e5e-11ed-9765-8b941efc3b53'; // JS
